@@ -52,6 +52,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homestyle.css">
+    <!-- <script src="js/editor.js"> </script> -->
     <title></title>
 </head>
 <body >
@@ -78,34 +79,62 @@
             <div class="icons_filter">
             <h3>Filters</h3>
                 <div class="icons_room">
-                    <button title="contrast" id="contrast">
-                    <img src="images/contrast_icon.png" alt="contrast icon" />
-                    </button>
-                    <button title="saturate" id="saturate">
-                    <img src="images/Saturation_icon.png" alt="" />
-                    </button>
-                    <button title="invert" id="invert">
-                    <img src="images/Invert_icon.png" alt="" />
-                    </button>
-                    <button title="blur" id="blur">
-                    <img src="images/Blur_icon.png" alt="" />
-                    </button>
+                    <div class="iconItems" id="contrast">
+                        <button title="contrast">
+                            <img src="images/contrast_icon.png" alt="contrast icon" />
+                        </button>
+                        <h4>Contrast</h4>
+                    </div>
+                    <div class="iconItems" id="saturate">
+                        <button title="saturate">
+                            <img src="images/Saturation_icon.png" alt="" />
+                        </button>
+                        <h4>Saturate</h4>
+                    </div>
+                    <div class="iconItems" id="invert">
+                        <button title="invert">
+                            <img src="images/Invert_icon.png" alt="" />
+                        </button>
+                        <h4>Invert</h4>
+                    </div>
+                    <div class="iconItems" id="blur">
+                        <button title="blur">
+                            <img src="images/Blur_icon.png" alt="" />
+                        </button>
+                        <h4>Blur</h4>
+                    </div>
             </div>
             </div>
+            <div class="icons_filter">
+                 <h3>rotate & flip</h3>
+                <div class="icons_room1">
+                    <div class="iconItems" id="rotate_left">
+                        <button title="rotate_left" ><img src="images/Rotate_Left_Icon.png" alt="" /></button>
+                        <h4> Rotate Left</h4>
+                    </div> 
+                    <div class="iconItems" id="rotate_right">
+                        <button title="rotate_right" ><img src="images/Rotate_Right_Icon.png" alt="" /></button>
+                        <h4> Rotate Right </h4>
+                    </div>
+                    <div class="iconItems" id="flip_x">
+                        <button title="flip_x"><img src="images/flip_x_icon.png" alt="" /></button>
+                        <h4> Flip_x</h4>
+                    </div>
+                    <div class="iconItems" id="flip_y">
+                        <button title="flip_y" ><img src="images/flip_y_icon.png" alt="" /></button>
+                        <h4> Flip_y</h4>
+                    </div>
+          
         </div>
+      </div>
+    </div>
         <div id="Text" class="content-section">
             <h1>Templates</h1>
             <p>Your templates content goes here.</p>
         </div>
-        <div id="Brightness" class="content-section">
+        <div id="brightness" class="content-section">
             <h1>Brightness</h1>
-            <div class="slider">
-                <div class="filter_info">
-                    <span class="name"> Brightness</span>
-                    <span class="value"> 100%</span>
-                </div>
-                <input type="range" name="" id="" max="200" min="0"/>
-            </div>
+            
             
         </div>
         <div id="Drawing" class="content-section">
@@ -122,6 +151,13 @@
         </div>
     </div>
     <script src="js/sidebar_script.js"></script>
+    <div class="slider">
+                <div class="filter_info">
+                    <span class="name"> Brightness</span>
+                    <span class="value"> 100%</span>
+                </div>
+                <input type="range" name="" id="" max="200" min="0" class="slideInput"/>
+            </div>
     <div class="wrapper">
         <div class="editor">
            
@@ -156,11 +192,16 @@
             <img src="Pictures/<?php echo $row['file'] ?>"/>
             <?php } ?> -->
 
-            <img src="Pictures/img3.jpeg" alt="img"/>
+            <img src="Pictures/img3.jpeg" id="user_img" alt="img"/>
+
+            
         
 </div>
 
         </div>
     </div>
+
+
+    <script src="js/editor.js"> </script>
 </body>
 </html>
