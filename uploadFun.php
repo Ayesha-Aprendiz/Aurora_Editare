@@ -1,57 +1,50 @@
 <?php
-    include('dbconn.php');
-    if(isset($_POST['submit']))
-    {
-        echo "<script> alert('running php')</script>";
-        if($_FILES["image"]["error"] == 4)
-        {
-            echo "Image not exist";
-        }
-        else
-        {
-            $file_name = $_FILES['image']["name"];
-            $file_size = $_FILES['image']['size'];
-            $tempname = $_FILES['image']['tmp_name'];
-            $folder= 'Pictures/'. $file_name;
-        
-            // $validimage_Extension = array('jpg', 'jpeg', 'png');
-            // $imageExtension = explode('.',$file_name);
-            // $imageExtension = strtolower(end($imageExtension));
+header('Content-Type: application/json');
 
-            
-            // if(!in_array($imageExtension,$validimage_Extension))
-            // {
-            //     echo "Ivalid image extension";
-            // }
-            // else{
-                // $newimageName = uniqid();
-                // $newimageName .= '.'.$imageExtension;
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $targetDir = "Pictures/";
+    $targetFile = $targetDir . basename($_FILES["image"]["name"]);
+    $uploadOk = 1;
 
-                //move_uploaded_file($tempname,$folder);
-                if(move_uploaded_file($tempname,$folder))
-        {
-            echo "File uploaded";
-        }
-        else{
-            echo "file not uploaded";
-        }
-                $query ="Insert into Images Values('','$file_name')";
-                mysqli_query($conn,$query);
-                if ($conn->query($query) === TRUE) 
-                {
-                    echo "New record created successfully";
-                } else 
-                {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-                }
-            }
-            // $img_name = $_FILES['image']['name'];
-            // $folder = 'Pictures/'.$img_name; 
+    $response = array(); // Use traditional array syntax
 
-        
-        
-        /*$query= mysqli_query($conn,"Insert into Images (file) values ('$file_name')");
-        
-        */
+    $check = getimagesize($_FILES["image"]["tmp_name"]);
+    if ($check !== false) {
+        $response['message'] = "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        $response['message'] = "File is not an image.";
+        $uploadOk = 0;
     }
+
+    if (file_exists($targetFile)) {
+        $response['message'] = "Sorry, file already exists.";
+        $uploadOk = 0;
+    }
+
+    if ($_FILES["image"]["size"] > 5000000) {
+        $response['message'] = "Sorry, your file is too large.";
+        $uploadOk = 0;
+    }
+
+    $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+    if (!in_array($imageFileType, array('jpg', 'jpeg', 'png', 'gif'))) { // Use traditional array syntax
+        $response['message'] = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        $uploadOk = 0;
+    }
+
+    if ($uploadOk == 0) {
+        $response['message'] = "Sorry, your file was not uploaded.";
+    } else {
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
+            $response['message'] = "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
+        } else {
+            $response['message'] = "Sorry, there was an error uploading your file.";
+        }
+    }
+
+    echo json_encode($response);
+} else {
+    echo json_encode(array('message' => 'Invalid request method.'));
+}
 ?>
