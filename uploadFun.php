@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $check = getimagesize($_FILES["image"]["tmp_name"]);
     if ($check !== false) {
-        $response['message'] = "File is an image - " . $check["mime"] . ".";
+        // $response['message'] = "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
     } else {
         $response['message'] = "File is not an image.";
@@ -37,7 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $response['message'] = "Sorry, your file was not uploaded.";
     } else {
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
-            $response['message'] = "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
+            // $response['message'] = "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
+            // $response['message'] = "";
+            $response['message'] = $targetFile;
+            // $response = null;
         } else {
             $response['message'] = "Sorry, there was an error uploading your file.";
         }

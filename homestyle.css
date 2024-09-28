@@ -472,12 +472,28 @@ body{
   /* float: right; */
   transform: translateY(-50%); /* Only vertical centering */
   border-radius: 10px;
-  box-shadow: 0 20px 35px rgba(255,255,255,0.15);
+  /* box-shadow: 0 20px 35px rgba(255,255,255,0.15); */
   display: grid;
   grid-template-columns: 5fr 7fr;
   align-items: center;
   justify-content: center;
 
+}
+
+.imgCanvas{
+  position: relative;
+  /* height: 100%; */
+  width: 240%;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.editor{
+  position: absolute;
+  /* margin-left: -40px; */
+  top: 38vh;
+  left: 41vw;
+  z-index: 4;
 }
 
 .choose_img {
@@ -580,8 +596,9 @@ body{
   cursor: pointer;
   transition:background var(--transition) ease;
   display: inline-block;
-  width: 75%;
-  padding: 10px 35px;
+  width: 90%;
+  padding: 10px 45px;
+  margin-left: -35px;
   position: relative;
 }
 

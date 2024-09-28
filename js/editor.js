@@ -1,6 +1,6 @@
 let choose_img_Btn = document.querySelector(".choose_img button");
 let choose_Input = document.querySelector(".choose_img input");
-let imgSrc = document.querySelector("#user_img");
+let imgSrc = document.querySelector("#image1");
 // let filter_buttons = document.querySelectorAll(".icons_room button");
 let filter_buttons = document.querySelectorAll(".icons_room .iconItems");
 // let _buttons = document.querySelectorAll(".icons_room .iconItems");
@@ -11,6 +11,10 @@ let slider_name = document.querySelector(".filter_info .name");
 let rotate_btns = document.querySelectorAll(".icons_room1 .iconItems");
 let reset = document.querySelector(".reset");
 let save = document.querySelector(".save");
+
+let removeButton = document.querySelector(".removeButtonContainer");
+
+
 let brightness = 100,
   contrast = 100,
   saturate = 100,
@@ -20,6 +24,8 @@ let brightness = 100,
   flip_x = 1,
   flip_y = 1;
 
+
+  // console.log(abc);
 
   // slider.value = 150;
 
@@ -122,3 +128,31 @@ rotate_btns.forEach((element) => {
     imgSrc.style.transform = `rotate(${rotate}deg) scale(${flip_x}, ${flip_y})`;
   });
 });
+
+
+
+removeButton.addEventListener("click",()=>{
+  imgSrc.src = "";
+  let chooseFileInput = document.querySelector(".editor");
+  chooseFileInput.style.display = "block";
+  let canvas = document.querySelector(".wrapper");
+  canvas.style.backgroundColor="white";
+
+  // const imageName = this.getAttribute('data-image');
+
+  // fetch('delete_image.php', {
+  //     method: 'POST',
+  //     headers: {
+  //         'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify({ image_name: imageName })
+  // })
+  // .then(response => response.json())
+  // .then(data => {
+  //     alert(data.message); // Show success or error message
+  // })
+  // .catch(error => {
+  //     console.error('Error:', error);
+  // });
+
+})
