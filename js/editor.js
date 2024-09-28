@@ -9,7 +9,7 @@ let filter_name = document.querySelector(".filter_info .name");
 let slider_value = document.querySelector(".filter_info .value");
 let slider_name = document.querySelector(".filter_info .name");
 let rotate_btns = document.querySelectorAll(".icons_room1 .iconItems");
-let reset = document.querySelector(".reset");
+let reset = document.querySelector(".resbtn_div .reset_fliters");
 let save = document.querySelector(".save");
 
 let removeButton = document.querySelector(".removeButtonContainer");
@@ -156,3 +156,15 @@ removeButton.addEventListener("click",()=>{
   // });
 
 })
+reset.addEventListener("click", () => {
+  brightness = "100";
+  saturate = "100";
+  contrast = "100";
+  invert = "0";
+  blur = "0";
+  rotate = 0;
+  flip_x = 1;
+  flip_y = 1;
+  imgSrc.style.transform = `rotate(${rotate}deg) scale(${flip_x}, ${flip_y})`;
+  imgSrc.style.filter = `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturate}%) invert(${invert}%) blur(${blur}px)`;
+});

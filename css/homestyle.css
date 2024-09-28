@@ -1,0 +1,59 @@
+    a{
+    color:whitesmoke;
+    text-decoration: underline;
+  }
+  #logo
+  {
+     /*background: rgba(3, 5, 12, 0.45);*/
+    box-shadow: 0 8px 32px 0 rgba(1, 1, 5, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+
+    background-color: #000416;   
+  }
+    #logoimg{
+    align-self: center;
+    margin-left: 50vh;
+   height: 700px;
+  width:800px;
+  opacity:1;
+  }
+  .progress-bar-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    height: 22px;
+    width: 0;
+    background:linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+    transition: width 8s;
+}
+body{
+    background: #a41ded;
+    background: -webkit-linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+    background: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+}
+/* From Uiverse.io by Phelix652 */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0.4em;
+  background-color: #171717;
+  border-radius: 15px;
+}
+
+#heading {
+  text-align: center;
+  margin: 2em;
+  color: rgb(0, 255, 200);
+  font-size: 1.2em;
+}

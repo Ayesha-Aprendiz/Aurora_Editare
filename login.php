@@ -7,7 +7,7 @@
     <title>aurora</title>
     <link rel="icon" type="image/x-icon" href="logo.jpeg">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"  rel="stylesheet">
-    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="css/login_pg.css">
     
     
 

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homestyle.css">
-    <link rel="stylesheet" href="removeButton.css">
+    <link rel="stylesheet" href="css/main_pg.css">
+    <!-- <link rel="stylesheet" href="removeButton.css"> -->
     <!-- <script src="js/editor.js"> </script> -->
     <title></title>
 </head>
@@ -113,10 +113,14 @@
     <div class="slider">
                 <div class="filter_info">
                     <span class="name"> Brightness</span>
+                    <input type="range" name="" id="" max="200" min="0" class="slideInput"/>
                     <span class="value"> 100%</span>
                 </div>
-                <input type="range" name="" id="" max="200" min="0" class="slideInput"/>
-            </div>
+                
+                <div class="resbtn_div">
+                    <button id="reset_filters" >Remove Filters</button>
+                </div>
+    </div>
 
     <div class="wrapper">
         <img src="" class="imgCanvas" id="image1">

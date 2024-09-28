@@ -1,0 +1,301 @@
+body{
+    background: #a41ded;
+    background: -webkit-linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+    background: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+}
+.container {
+    width: 100vw;
+    height: 70px;
+    position: fixed;
+    background-color:#9400D3;
+    top:0%;
+    padding-top: 5px; 
+    right:0;
+    z-index:2;
+       
+}
+.form_container
+{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: -20px;
+  justify-content: center;
+  width: 100%;
+  /* gap: 10px;margin-top: 10px; */
+
+  /* background-color: rgba(0, 255, 255, 0.696); */
+}
+/* From Uiverse.io by mrhyddenn */ 
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 350px;
+  margin-left: 100px;
+  background: transparent;
+  /* gap: 10px; */
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid whitesmoke;
+  outline: 0;
+  font-size: 22px;
+  color:whitesmoke;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 22px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 22px;
+  color:whitesmoke;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 750;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+  border-image-slice: 1;
+  font-size: 19px;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 22px;
+  color: #38caef;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+} 
+#index
+  {
+    height: 100vh;
+   
+    /*background: rgb(7,11,13);
+    background: linear-gradient(180deg, rgba(7,11,13,1) 10%, rgba(196,29,237,1) 42%, rgba(164,29,237,1) 100%);*/
+    background-image: url('homebg.png');  
+  }
+  p{
+    font-size: 18px;
+    color:whitesmoke;
+    margin-top: 20px;
+  }
+  
+.loginContainer{
+    align-self: center;
+    margin-left: 50px;
+  }
+  .card {
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 22px;
+    transition: all .3s;
+    margin-top: 55px;
+    width:600px;
+    margin-left: 30%;
+    display:flex ;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card2 {
+    border-radius: 0;
+    transition: all .2s;
+  }
+  
+  .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+  }
+  /* From Uiverse.io by mrhyddenn */ 
+  .container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    
+  }
+  
+  .card_box {
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+    cursor: pointer;
+    transition: all .3s;
+  }
+  
+  .card_box:hover {
+    transform: scale(0.9);
+  }
+  
+  .card_box .ribbonSpan {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card_box .ribbonSpan::before {
+    content: 'Registration';
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    font-style: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+  }
+  
+  .card_box .ribbonSpan::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  }
+  
+  
+  
+  .card_box .loginSpan {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card_box .loginSpan::before {
+    content: 'Login';
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    font-style: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+  }
+  
+  .card_box .loginSpan::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  }
+  .submitContainer button {
+    align-items: center;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+    /* position: absolute; */
+    margin-top: 20px;
+    width: 350px;
+  }
+  
+  .submitContainer button:active,
+  .submitContainer button:hover {
+    outline: 0;
+  }
+  
+  .submitContainer button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .submitContainer button:hover span {
+    background: none;
+  }
+  
+  .submitContainer button:active {
+    transform: scale(0.9);
+  }
+  .loginMessage{
+    align-self: center;
+  margin-left: -40px;
+  }

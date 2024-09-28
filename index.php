@@ -7,7 +7,7 @@
     <title>aurora</title>
     <link rel="icon" type="image/x-icon" href="weblogo.png">
 
-    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="css/homestyle.css">
     <script src='star.js' type="javascript"> </script>
     
 
