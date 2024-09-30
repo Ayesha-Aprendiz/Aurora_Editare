@@ -9,7 +9,7 @@ let filter_name = document.querySelector(".filter_info .name");
 let slider_value = document.querySelector(".filter_info .value");
 let slider_name = document.querySelector(".filter_info .name");
 let rotate_btns = document.querySelectorAll(".icons_room1 .iconItems");
-let reset = document.querySelector(".resbtn_div .reset_fliters");
+let reset = document.querySelector("#reset_filters");
 let save = document.querySelector(".save");
 
 let removeButton = document.querySelector(".removeButtonContainer");
@@ -154,9 +154,8 @@ removeButton.addEventListener("click",()=>{
   // .catch(error => {
   //     console.error('Error:', error);
   // });
-
 })
-reset.addEventListener("click", () => {
+reset.addEventListener("click",() => {
   brightness = "100";
   saturate = "100";
   contrast = "100";
@@ -168,3 +167,23 @@ reset.addEventListener("click", () => {
   imgSrc.style.transform = `rotate(${rotate}deg) scale(${flip_x}, ${flip_y})`;
   imgSrc.style.filter = `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturate}%) invert(${invert}%) blur(${blur}px)`;
 });
+
+// document.getElementById('downloadBtn').addEventListener('click', function() {
+//   const image = document.getElementById('image1');
+//   const link = document.createElement('a');
+//   link.download = 'edited-image.jpg'; // Desired file name
+//   link.href = image.src; // Get image source URL
+//   link.click(); // Simulate click to download
+// });
+
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+
+document.getElementById('downloadBtn').addEventListener('click', function() {
+  // Convert the canvas content to a data URL
+  const link = document.createElement('a');
+  link.download = 'edited-image.png'; // Desired file name
+  link.href = canvas.toDataURL(); // Get image data as a PNG
+  link.click(); // Simulate click to download
+});
+
