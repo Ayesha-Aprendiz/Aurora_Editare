@@ -176,14 +176,47 @@ reset.addEventListener("click",() => {
 //   link.click(); // Simulate click to download
 // });
 
-const canvas = document.getElementById('myCanvas');
-const ctx = canvas.getContext('2d');
+// const canvas = document.getElementById('myCanvas');
+// const ctx = canvas.getContext('2d');
 
-document.getElementById('downloadBtn').addEventListener('click', function() {
+// document.getElementById('downloadBtn').addEventListener('click', function() {
+//   // Convert the canvas content to a data URL
+//   const link = document.createElement('a');
+//   link.download = 'edited-image.png'; // Desired file name
+//   link.href = canvas.toDataURL(); // Get image data as a PNG
+//   link.click(); // Simulate click to download
+// });
+
+
+document.getElementById("downloadBtn").addEventListener("click", function () {
   // Convert the canvas content to a data URL
-  const link = document.createElement('a');
-  link.download = 'edited-image.png'; // Desired file name
-  link.href = canvas.toDataURL(); // Get image data as a PNG
-  link.click(); // Simulate click to download
+
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+  canvas.width = imgSrc.naturalWidth;
+  canvas.height = imgSrc.naturalHeight;
+
+  ctx.filter = `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturate}%) invert(${invert}%) blur(${blur}px)`;
+  ctx.translate(canvas.width / 2, canvas.height / 2);
+
+  ctx.scale(flip_x, flip_y);
+
+  if (rotate != 0) {
+    ctx.rotate((rotate * Math.PI) / 180);
+  }
+
+  ctx.drawImage(
+    imgSrc,
+    -canvas.width / 2,
+    -canvas.height / 2,
+    canvas.width,
+    canvas.height
+  );
+  // document.body.appendChild(canvas);
+
+  const link = document.createElement("a");
+  link.download = "image.png";
+  link.href = canvas.toDataURL();
+  link.click();
 });
 

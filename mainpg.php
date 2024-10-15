@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main_pg.css">
+    <link rel="stylesheet" href="css/downloadBtn.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+    </style>    
     <!-- <link rel="stylesheet" href="removeButton.css"> -->
     <!-- <script src="js/editor.js"> </script> -->
     <title></title>
@@ -124,7 +129,7 @@
 
     <div class="wrapper">
         <!-- <canvas id="myCanvas"> -->
-        <img src="Pictures/img.png" class="imgCanvas" id="image1">
+        <img src="images/canvasDefault.jpg" class="imgCanvas" id="image1">
         <!-- </canvas> -->
         
     </div>
@@ -184,7 +189,7 @@
      </div>
 
 
-     <div class="removeButtonContainer" data_image = "Pictures\img2.jpg" place ="">
+     <div class="removeButtonContainer">
         <button class="button">
             <svg xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -231,7 +236,37 @@
             </span>
         </div>
     </div> -->
-    <button id="downloadBtn"> Download</button>
+    <!-- <button id="downloadBtn"> Download</button> -->
+
+
+    <div class="container" id="downloadBtn">
+  <label class="label">
+    <input type="checkbox" class="input" />
+    <span class="circle"
+      ><svg
+        class="icon"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M12 19V5m0 14-4-4m4 4 4-4"
+        ></path>
+      </svg>
+      <div class="square"></div>
+    </span>
+    <p class="title">Download</p>
+    <p class="title downloadedMessage">Downloaded</p>
+  </label>
+</div>
+
+
+
 
     <script src="js/editor.js"></script>
 </body>

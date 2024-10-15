@@ -1,0 +1,93 @@
+body{
+    background: #a41ded;
+    background: -webkit-linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+    background: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+    color:white;
+}
+*{
+    font-family:'merriweather';
+}
+table,tr{
+    width: 400px;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, #40c9ff,#e81cff) border-box;
+    border: 2px solid transparent;
+    /* padding: 32px 24px; */
+    font-size: 22px;
+    
+    color:white;
+    /* display:flex;  */
+    /* flex-direction: column; */ 
+    gap: 20px;
+    /* box-sizing: border-box; */
+    /* border-radius: 16px; */
+    border-collapse: collapse; 
+    
+  }
+  th,td{
+    padding: 13px;
+  }
+  #adminpage{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0;
+  }
+  .cssbuttons-io {
+	position: relative;
+	
+	font-weight: 500;
+	font-size: 18px;
+	letter-spacing: 0.05em;
+	border-radius: 0.5em;
+	cursor: pointer;
+	border: none;
+  
+	/* Hover color change karna ho toh idhar */
+	background: linear-gradient(to right, #8e2de2, #4a00e0);
+	
+	color: ghostwhite;
+	overflow: hidden;
+	width: 150px;
+	height: 50px;
+  }
+  
+  .cssbuttons-io span {
+	position: relative;
+	z-index: 10;
+	transition: color 0.4s;
+  }
+  .cssbuttons-io:hover {
+	border: 1px solid white;
+  }
+  
+  .cssbuttons-io::before,
+  .cssbuttons-io::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+  }
+  
+  .cssbuttons-io::before {
+	content: "";
+	background: #000;
+	width: 120%;
+	left: -10%;
+	transform: skew(30deg);
+	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  
+  .cssbuttons-io:hover::before {
+	transform: translate3d(100%, 0, 0);
+  }
+  
+  .cssbuttons-io:active {
+	transform: scale(0.95);
+  }
+  .cssbuttons-io a{
+    text-decoration: none;
+  }

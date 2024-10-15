@@ -1,11 +1,11 @@
 * {
 	padding:0;
 	margin:0;
+	font-family: 'merriweather';
 }
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	/* font-family: Arial, Helvetica, sans-serif; */
 	font-size: 14px;
-
 }
 /*.svg-hero {
 	width: 100vw;
@@ -267,8 +267,9 @@ h6 {
 	width: 135px;
 	height: 135px;
 	border-radius: 100px;
-	background: #7a60ff;
-	background:  linear-gradient(to left, #7a60ff, #cd9ffa);
+	background: #a41ded;
+    background: -webkit-linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+    background: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
 	color: #ffffff;
 	font-size: 50px;
 	line-height: 135px;
@@ -284,16 +285,18 @@ h6 {
 	margin: 0 auto;
 }
 .about-btn {
-	color: #8e1efc;
+	color:#a41ded;
 	padding: 10px 40px;
-	border: 2px solid #8e1efc;
+	border: 2px solid #a41ded;
 	border-radius: 7px;
 	margin-top: 30px;
 	display: inline-block;
 	font-size: 18px;
 }
 .about-btn:hover {
-	background:#8e1efc;
+	background: #a41ded;
+    background: -webkit-linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+    background: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
 	color:#ffffff;
 	text-decoration:none;
 }
@@ -514,15 +517,17 @@ input {
 	color: #fff;
 	border-radius: 2rem;
 	border: 0;
-	background: #7a60ff;
-	background: linear-gradient(to left, #7a60ff, #cd9ffa);
+	background: #a41ded;
+    background: -webkit-linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+    background: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
 	cursor:pointer;
 }
 .contact-info {
 	padding: 2rem 2rem 1rem;
 	border-radius: 8px;
-	background: #7a60ff;
-	background: linear-gradient(to left, #7a60ff, #cd9ffa);
+	background: #a41ded;
+    background: -webkit-linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+    background: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
 }
 .contact-item {
 	margin:23px 0px;
@@ -535,8 +540,9 @@ input {
 	margin: 0;
 }
 .download {
-	background: #7a60ff;
-	background: linear-gradient(to left, #7a60ff, #cd9ffa);
+	background: #a41ded;
+    background: -webkit-linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+    background: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
 	padding:100px 0px;
 	position:relative;
 }
@@ -680,4 +686,26 @@ h3 {
 .footer-copy p {
 	font-size: 10px;
 }
+}
+
+
+
+.imageIcon{
+	height: 70%;
+}
+
+.iconContainer{
+	height: 150px;
+	width: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+	/* border: 1px solid black; */
+	border-radius: 50%;
+	margin-left: 100px;
+}
+
+.iconContainer:hover{
+	scale:1.05;
 }

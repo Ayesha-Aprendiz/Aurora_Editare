@@ -1,7 +1,14 @@
+*{
+  font-family: 'merriweather';
+}
+
 body{
     background: #a41ded;
     background: -webkit-linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
     background: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+    /* overflow: hidden; */
+    height: 100vh;
+    width: 100vw;
 }
 /* sidebar CSS */
 
@@ -60,7 +67,7 @@ body{
     margin-left: 140px; /* Sidebar width */
     padding: 20px;
     background-color: #34495E;
-    margin-top: -7px;
+    margin-top: -10px;
     color:white;
   }
   @media (max-width: 768px) {
@@ -138,7 +145,9 @@ body{
    
     border-radius: 10px;
     z-index: 2;
-    max-height: 80vh;
+    /* max-height: 80vh; */
+    /* height: 100%; */
+    width: 90vmin;
   }
   
   .editor{
@@ -482,6 +491,7 @@ body{
     top: 20px;
     /* bottom: 20px; */
     right: 20px;
+
 }
 .button {
     width: 50px;
@@ -572,7 +582,7 @@ body{
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    border: 2px solid var(--color);
+    border: 1px solid var(--color);
     transition: color 0.5s;
     z-index: 1;
     font-size: 17px;
@@ -581,6 +591,9 @@ body{
     color: var(--color);
     margin-left: 300px;
     font-weight: bolder;
+    border-radius: 30px;
+    scale: 1.14;
+    margin-right: 6px;
   }  
   #reset_filters:before {
     content: "";
@@ -727,4 +740,10 @@ body{
 
 .down_btn:hover:before {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+} */
+
+/* #downloadBtn{
+  position: absolute;
+  top: 100px;
+  right: 20px;
 } */

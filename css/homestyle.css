@@ -34,10 +34,13 @@
     background:linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
     transition: width 8s;
 }
-body{
+/* body{
     background: #a41ded;
     background: -webkit-linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
     background: linear-gradient(to right, #a41ded, #29afd1, #38e5ba);
+} */
+#index{
+  background-color: black;
 }
 /* From Uiverse.io by Phelix652 */ 
 .form {
