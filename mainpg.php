@@ -20,14 +20,14 @@
             <ul class="menu">
                 <li class="menu-item active" data-target="Basics">
                      <img src="images/Basics_icon.png" alt="Basics Icon" class="icon"/> </li>
-                <li class="menu-item" data-target="Text">
-                    <img src="images/text_icon.png" alt="Text Icon" class="icon"/></li>
+                <!-- <li class="menu-item" data-target="Text">
+                    <img src="images/text_icon.png" alt="Text Icon" class="icon"/></li> -->
                 <li class="menu-item" data-target="Filters">
                     <img src="images/Filters_icon.png" alt="Filters Icon" class="icon"/></li>
-                <li class="menu-item" data-target="Drawing">
+                 <!-- <li class="menu-item" data-target="Drawing">
                     <img src="images/Drawing_icon.png" alt="Drawing Icon" class="icon"/></li>
                 <li class="menu-item" data-target="Shapes">Shapes</li>
-                <li class="menu-item" data-target="backgrounds">Backgrounds</li>
+                <li class="menu-item" data-target="backgrounds">Backgrounds</li> --> 
             </ul>
         </div>
     </div> 
@@ -101,9 +101,11 @@
             </div>
          </div>  
         </div>
-        <div id="Drawing" class="content-section">
-            <h1>Elements</h1>
-            <p>Your elements content goes here.</p>
+         <div id="Drawing" class="content-section">
+         <h3>Resize Image</h3>
+        <input type="number" id="resize-width" placeholder="Width" min="50" max="1000" value="600">
+        <input type="number" id="resize-height" placeholder="Height" min="50" max="1000" value="400">
+        <button id="resize-btn">Resize</button>
         </div>
         <div id="Shapes" class="content-section">
             <h1>Text</h1>
@@ -112,7 +114,7 @@
         <div id="backgrounds" class="content-section">
             <h1>Backgrounds</h1>
             <p>Your backgrounds content goes here.</p>
-        </div>
+        </div> 
     </div>
     <script src="js/sidebar_script.js"></script>
     <div class="slider">
@@ -120,11 +122,8 @@
                     <span class="name"> Brightness</span>
                     <input type="range" name="" id="" max="200" min="0" class="slideInput"/>
                     <span class="value"> 100%</span>
-                </div>
+                </div>             
                 
-                <div class="resbtn_div">
-                    <button id="reset_filters" >Remove Filters</button>
-                </div>
     </div>
 
     <div class="wrapper">
@@ -226,44 +225,34 @@
             </svg>
         </button>
      </div>
-    <!-- <div class="down_btn" data-tooltip="">
-        <div class="button-wrapper">
-        <div class="text">Download</div>
-            <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path>
-            </svg>
-            </span>
-        </div>
-    </div> -->
-    <!-- <button id="downloadBtn"> Download</button> -->
-
-
     <div class="container" id="downloadBtn">
-  <label class="label">
-    <input type="checkbox" class="input" />
-    <span class="circle"
-      ><svg
-        class="icon"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-      >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
-          d="M12 19V5m0 14-4-4m4 4 4-4"
-        ></path>
-      </svg>
+    <label class="label">
+        <input type="checkbox" class="input" />
+        <span class="circle">
+            <svg
+            class="icon"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M12 19V5m0 14-4-4m4 4 4-4">
+            </path>
+            </svg>
       <div class="square"></div>
     </span>
     <p class="title">Download</p>
     <p class="title downloadedMessage">Downloaded</p>
   </label>
-</div>
+  
+    </div>
+    <div class="resbtn_div">
+        <button id="reset_filters" >Remove Filters</button>
+    </div>
 
 
 

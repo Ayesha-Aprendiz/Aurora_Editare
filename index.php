@@ -32,7 +32,7 @@
 
         // Redirect to another page after the loading time
         setTimeout(() => {
-            window.location.href = 'index.html'; // Replace with your target page URL
+            window.location.href = 'home.php'; // Replace with your target page URL
         }, 5000); // Small delay to allow the progress bar to complete
         }, 100); // Initial delay before starting progress bar animation
         </script>

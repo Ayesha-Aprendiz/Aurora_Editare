@@ -7,8 +7,7 @@ menuItems.forEach(item => {
         // Remove active class from all menu items
         menuItems.forEach(i => i.classList.remove('active'));
         // Hide all content sections
-        contentSections.forEach(section => section.classList.remove('active'));
-        
+        contentSections.forEach(section => section.classList.remove('active'));      
         // Set the clicked item as active
         // item.classList.add('active');
         // Get the target section ID and show it
@@ -22,3 +21,9 @@ menuItems.forEach(item => {
         // target.classList.add('active');
     });
 });
+
+const filters=document.querySelector('#Filters');
+const slider=document.querySelector('.slider');
+
+
+        

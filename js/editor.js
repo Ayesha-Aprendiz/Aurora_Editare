@@ -11,6 +11,9 @@ let slider_name = document.querySelector(".filter_info .name");
 let rotate_btns = document.querySelectorAll(".icons_room1 .iconItems");
 let reset = document.querySelector("#reset_filters");
 let save = document.querySelector(".save");
+const resizeBtn = document.getElementById('resize-btn');
+        const resizeWidth = document.getElementById('resize-width');
+        const resizeHeight = document.getElementById('resize-height');
 
 let removeButton = document.querySelector(".removeButtonContainer");
 
@@ -29,9 +32,40 @@ let brightness = 100,
 
   // slider.value = 150;
 
-  document.addEventListener("load",()=>{
+  document.addEventListener("DOMContentLoaded",()=>{
     let slider = document.querySelector(".slideInput");
-  })
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+      const filterMenuItem = document.querySelector('.menu-item[data-target="Filters"]');
+      const slider = document.querySelector('.slider');
+      const menuItems = document.querySelectorAll('.menu-item');
+  
+      // Initially hide the slider
+      slider.style.display = "none";
+  
+      filterMenuItem.addEventListener('click', () => {
+          // Toggle the slider's visibility
+          if (slider.style.display === "none" || slider.style.display === "") {
+              slider.style.display = "flex"; // Show slider
+          }
+           else {
+              slider.style.display = "none"; // Hide slider
+          }
+      });
+  
+      menuItems.forEach(item => {
+          item.addEventListener('click', () => {
+              // Hide slider if any other menu item is clicked
+              if (item.getAttribute('data-target') !== "Filters") {
+                  slider.style.display = "none"; // Hide slider
+              }
+          });
+      });
+  });
+ 
+  
+
 
 /*choose_img_Btn.addEventListener("click", () => choose_Input.click());
 choose_Input.addEventListener("change", () => {
@@ -42,6 +76,10 @@ choose_Input.addEventListener("change", () => {
     document.querySelector(".container").classList.remove("disabled");
   });
 });*/
+document.getElementById("Filters").addEventListener("click", function()
+{
+    document.getElementById("slider").style.display=flex;
+})
 
 filter_buttons.forEach((element) => {
   element.addEventListener("click", () => {
@@ -156,6 +194,7 @@ removeButton.addEventListener("click",()=>{
   // });
 })
 reset.addEventListener("click",() => {
+  
   brightness = "100";
   saturate = "100";
   contrast = "100";
@@ -166,6 +205,18 @@ reset.addEventListener("click",() => {
   flip_y = 1;
   imgSrc.style.transform = `rotate(${rotate}deg) scale(${flip_x}, ${flip_y})`;
   imgSrc.style.filter = `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturate}%) invert(${invert}%) blur(${blur}px)`;
+
+   // Reset slider values
+   const sliderInputs = document.querySelectorAll('.slideInput');
+   sliderInputs.forEach(slider => {
+       slider.value = 0; // Set slider value to 0
+   });
+
+   // Update displayed values (if you have elements showing the slider value)
+   const displayedValues = document.querySelectorAll('.value'); // Assuming you have elements with class "value"
+   displayedValues.forEach(value => {
+       value.textContent = '0%'; // Update displayed text to 0%
+   });
 });
 
 // document.getElementById('downloadBtn').addEventListener('click', function() {
